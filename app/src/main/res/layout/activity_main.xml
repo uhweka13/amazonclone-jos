@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track your purchases"
+        android:fontFamily="@font/barlowsemibold"
+        android:layout_marginTop="150dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View your wish list"
+        android:fontFamily="@font/barlow"
+        android:layout_marginStart="30dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find &amp; reorder past purchases "
+        android:fontFamily="@font/barlow"
+        android:layout_marginStart="30dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track your purchases"
+        android:fontFamily="@font/barlow"
+        android:layout_marginStart="30dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/bt_signIn"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Already a customer? Sign in"
+        android:textAllCaps="false"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/barlow"
+        android:textStyle="bold"
+        android:background="@drawable/btnbackground"
+        android:stateListAnimator="@null"
+        />
+
+    <Button
+        android:id="@+id/bt_signup"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="New to Amazon.com? Create an account"
+        android:textAllCaps="false"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/barlow"
+        android:textStyle="bold"
+        android:background="@drawable/btngray"
+        android:stateListAnimator="@null"
+        />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Skip sign in"
+        android:textAllCaps="false"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/barlow"
+        android:textStyle="bold"
+        android:background="@drawable/btngray"
+        android:stateListAnimator="@null"
+        />
+
+</LinearLayout>

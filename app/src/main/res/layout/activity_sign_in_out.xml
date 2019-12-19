@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F2F2"
+    tools:context=".SignInOut">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/toolbarlogo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="22sp"
+        android:fontFamily="@font/asapregular"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layoutsigninout"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+        <RadioGroup
+            android:id="@+id/rb_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rb_create_account1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Create account. New to Amazon?"
+                android:fontFamily="@font/asapregular"
+                android:textSize="12dp"/>
+
+            <LinearLayout
+                android:id="@+id/layout_create_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/signinoutedittext"
+                    android:padding="10dp"
+                    android:fontFamily="@font/barlow"
+                    android:textSize="15dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile number or email"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/signinoutedittext"
+                    android:padding="10dp"
+                    android:fontFamily="@font/barlow"
+                    android:textSize="15dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Create a password"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/signinoutedittext"
+                    android:padding="10dp"
+                    android:fontFamily="@font/barlow"
+                    android:textSize="15dp"/>
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Show password"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/barlow"
+                    android:textSize="15dp"/>
+
+                <Button
+                    android:id="@+id/bt_signIn"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="Continue"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/barlow"
+                    android:textStyle="bold"
+                    android:background="@drawable/btnbackground"
+                    android:stateListAnimator="@null"
+                    />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb_create_account2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Sign-in. Already a customer?"
+                android:fontFamily="@font/asapregular"
+                android:textSize="12dp"/>
+            <LinearLayout
+                android:id="@+id/layout_signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email(phone for mobile accounts)"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/signinoutedittext"
+                    android:padding="10dp"
+                    android:fontFamily="@font/barlow"
+                    android:textSize="15dp"/>
+                <Button
+                    android:id="@+id/bt_signup"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="Continue"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/barlow"
+                    android:textStyle="bold"
+                    android:background="@drawable/btnbackground"
+                    android:stateListAnimator="@null"
+                    />
+            </LinearLayout>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By continuing, you agree to Amazon's Conditions of Use and Privacy Notice."
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/barlow"/>
+        <TextView
+            android:id="@+id/tv_need_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need help?"
+            android:fontFamily="@font/barlow"
+            android:layout_marginStart="15dp"
+            android:textColor="#16658A"
+            android:layout_marginBottom="5dp"/>
+        <LinearLayout
+            android:id="@+id/ly_need_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot your password?"
+                android:fontFamily="@font/barlow"
+                android:textColor="#16658A"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other issues with Sign-In"
+                android:fontFamily="@font/barlow"
+                android:layout_marginBottom="10dp"
+                android:textColor="#16658A"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
