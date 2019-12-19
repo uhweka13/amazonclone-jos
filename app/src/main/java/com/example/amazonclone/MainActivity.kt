@@ -14,6 +14,12 @@ class MainActivity : AppCompatActivity() {
 
         val bt_signin = findViewById<Button>(R.id.bt_signIn)
         val bt_signup = findViewById<Button>(R.id.bt_signup)
+        val bt_skip = findViewById<Button>(R.id.bt_skip)
+        bt_skip.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+        })
 
         bt_signin.setOnClickListener(View.OnClickListener {
 

@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".SignInOut"
-            android:theme="@style/AuthTheme"></activity>
+            android:theme="@style/AuthTheme" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AuthTheme">
