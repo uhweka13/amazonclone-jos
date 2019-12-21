@@ -197,21 +197,19 @@ class SignInOut : AppCompatActivity() {
 
         if (emailFinal.isEmpty()){
             findViewById<LinearLayout>(R.id.layout_error).visibility = View.VISIBLE
-            findViewById<TextView>(R.id.tv_name_error).visibility = View.VISIBLE
-            var tv_details = findViewById<TextView>(R.id.tv_name_error)
-            tv_details.setText("Enter your email")
+            findViewById<TextView>(R.id.tv_email_error).visibility = View.VISIBLE
+            findViewById<TextView>(R.id.tv_password_error).visibility = View.GONE
+            findViewById<TextView>(R.id.tv_name_error).visibility = View.GONE
+            var tv_details = findViewById<TextView>(R.id.tv_email_error)
+            tv_details.setText("Enter your email or mobile phone number")
 
             val foo = findViewById<EditText>(R.id.et_email_sign_in)
             foo.setBackgroundResource(R.drawable.edittexterror)
-        }else{
-            findViewById<TextView>(R.id.tv_name_error).visibility = View.GONE
-            val foo = findViewById<EditText>(R.id.et_email_sign_in)
-            foo.setBackgroundResource(R.drawable.signinoutedittext)
-        }
-
-        if(!emailFinal.contains("@")|| !emailFinal.contains(".")){
+        }else if(!emailFinal.contains("@")|| !emailFinal.contains(".")){
             findViewById<LinearLayout>(R.id.layout_error).visibility = View.VISIBLE
             findViewById<TextView>(R.id.tv_email_error).visibility = View.VISIBLE
+            val emailError = findViewById<TextView>(R.id.tv_email_error)
+            findViewById<TextView>(R.id.tv_password_error).visibility = View.GONE
             var tv_details = findViewById<TextView>(R.id.tv_email_error)
             tv_details.setText("Invalid email")
 
@@ -222,6 +220,13 @@ class SignInOut : AppCompatActivity() {
             val foo = findViewById<EditText>(R.id.et_email_sign_in)
             foo.setBackgroundResource(R.drawable.signinoutedittext)
         }
+
+
+//        else{
+//            findViewById<TextView>(R.id.tv_name_error).visibility = View.GONE
+//            val foo = findViewById<EditText>(R.id.et_email_sign_in)
+//            foo.setBackgroundResource(R.drawable.signinoutedittext)
+//        }
 
         if(emailFinal.contains("@") && emailFinal.contains(".") && !emailFinal.isEmpty()){
             findViewById<LinearLayout>(R.id.layout_error).visibility = View.GONE

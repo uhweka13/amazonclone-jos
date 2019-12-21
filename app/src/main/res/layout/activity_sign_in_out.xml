@@ -54,13 +54,12 @@
             android:fontFamily="@font/barlow"
             android:layout_marginStart="10dp"
             android:textColor="@android:color/black"
-            android:visibility="gone"
-            android:layout_marginBottom="5dp"/>
+            android:visibility="gone"/>
         <TextView
             android:id="@+id/tv_password_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter your password"
+            android:text=""
             android:textSize="13dp"
             android:fontFamily="@font/barlow"
             android:layout_marginStart="10dp"
