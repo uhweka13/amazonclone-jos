@@ -13,6 +13,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.widget.EditText
 
 class HomeActivity : AppCompatActivity() {
 
@@ -21,6 +22,14 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home2)
+
+        val bt_search_frag = findViewById<EditText>(R.id.ed_seach_home_frag)
+
+
+
+//        val toolbar1:Toolbar = findViewById(R.id.toolbar1)
+//        setSupportActionBar(toolbar1)
+
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 

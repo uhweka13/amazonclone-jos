@@ -14,6 +14,73 @@
         android:layout_height="40dp"
         android:background="@drawable/toolbarlogo"/>
 
+    <LinearLayout
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/layouterror"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There was a problem"
+            android:fontFamily="@font/asapregular"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"/>
+        <TextView
+            android:id="@+id/tv_name_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13dp"
+            android:fontFamily="@font/barlow"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_email_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your email"
+            android:textSize="13dp"
+            android:fontFamily="@font/barlow"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:id="@+id/tv_password_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your password"
+            android:textSize="13dp"
+            android:fontFamily="@font/barlow"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:id="@+id/tv_email_signin_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13dp"
+            android:fontFamily="@font/barlow"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <EditText
+                    android:id="@+id/et_user_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Name"
@@ -64,6 +132,7 @@
                     android:fontFamily="@font/barlow"
                     android:textSize="15dp"/>
                 <EditText
+                    android:id="@+id/et_email_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Mobile number or email"
@@ -75,6 +144,7 @@
                     android:fontFamily="@font/barlow"
                     android:textSize="15dp"/>
                 <EditText
+                    android:id="@+id/et_passWord_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Create a password"
@@ -97,7 +167,7 @@
                     android:textSize="15dp"/>
 
                 <Button
-                    android:id="@+id/bt_signIn"
+                    android:id="@+id/bt_signup"
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
@@ -128,6 +198,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <EditText
+                    android:id="@+id/et_email_sign_in"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email(phone for mobile accounts)"
@@ -137,9 +208,10 @@
                     android:background="@drawable/signinoutedittext"
                     android:padding="10dp"
                     android:fontFamily="@font/barlow"
+                    android:text=""
                     android:textSize="15dp"/>
                 <Button
-                    android:id="@+id/bt_signup"
+                    android:id="@+id/bt_signin"
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"

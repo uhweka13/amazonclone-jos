@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F2F2"
+    tools:context=".SigninProcess">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/toolbarlogo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign-In"
+        android:textSize="22sp"
+        android:fontFamily="@font/asapregular"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="15dp"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_verified_email"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="uhweka@gmail.com"
+            android:layout_marginStart="15dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/barlow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#1078A7"
+            android:text="Change"
+            android:fontFamily="@font/barlow"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/et_password_signin_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amazon password"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/signinoutedittext"
+                    android:padding="10dp"
+                    android:fontFamily="@font/barlow"
+                    android:inputType="textPassword"
+                    android:text="1111111111"
+                    android:textSize="15dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Show password"
+                        android:fontFamily="@font/barlow"
+                        android:textColor="@android:color/black"/>
+
+                    <TextView
+                        android:id="@+id/tv_password_reset"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Forgot password?"
+                        android:textSize="14dp"
+                        android:layout_marginTop="6dp"
+                        android:textAlignment="textEnd"
+                        android:fontFamily="@font/barlow"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/bt_signin_process"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="Sign-In"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/barlow"
+                    android:textStyle="bold"
+                    android:background="@drawable/btnbackground"
+                    android:stateListAnimator="@null"
+                    />
+
+    </LinearLayout>
+
+</LinearLayout>

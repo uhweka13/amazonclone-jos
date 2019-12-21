@@ -8,15 +8,47 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
         android:theme="@style/AppTheme.AppBarOverlay">
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:fitsSystemWindows="true">
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ed_seach_home_frag"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittextsearch"
+                android:hint="what are you looking for?"
+                android:fontFamily="@font/barlow"
+                android:padding="5dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="5dp"
+                android:drawableLeft="@drawable/ic_search"
+                android:textColorHint="#979494"
+                android:layout_weight="9"
+                android:inputType="text"/>
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:layout_weight="1"
+                android:src="@drawable/ic_photo_camera"
+                android:layout_marginEnd="5dp"/>
+        </LinearLayout>
+
+
 
     </com.google.android.material.appbar.AppBarLayout>
 

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F2F2"
+    tools:context=".ForgotPass">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/toolbarlogo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password assistance"
+        android:textSize="22sp"
+        android:fontFamily="@font/asapregular"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="15dp"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_verified_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter the email address or mobile phone number association with your Amazon account"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/barlow"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/et_password_reset_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amazon password"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/signinoutedittext"
+            android:padding="10dp"
+            android:fontFamily="@font/barlow"
+            android:inputType="textEmailAddress"
+            android:text="1111111111"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/bt_send_reset_mail"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/barlow"
+            android:textStyle="bold"
+            android:background="@drawable/btnbackground"
+            android:stateListAnimator="@null"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Has your email or mobile number changed?"
+            android:textSize="18sp"
+            android:fontFamily="@font/asapregular"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="15dp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If you no longer use the e-mail address associated with your Amazon account, you may contact Customer Service for help restoring access to your account."
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/barlow"/>
+
+    </LinearLayout>
+
+</LinearLayout>
