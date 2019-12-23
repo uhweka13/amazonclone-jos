@@ -13,6 +13,41 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/toolbarlogo"/>
+    <LinearLayout
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/layouterror"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There was a problem"
+            android:fontFamily="@font/asapregular"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"/>
+
+        <TextView
+            android:id="@+id/tv_password_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13dp"
+            android:fontFamily="@font/barlow"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -65,7 +100,7 @@
                     android:padding="10dp"
                     android:fontFamily="@font/barlow"
                     android:inputType="textPassword"
-                    android:text="1111111111"
+                    android:text=""
                     android:textSize="15dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -75,6 +110,7 @@
                     android:layout_marginEnd="15dp"
                     android:layout_marginTop="10dp">
                     <CheckBox
+                        android:id="@+id/cd_password_login"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

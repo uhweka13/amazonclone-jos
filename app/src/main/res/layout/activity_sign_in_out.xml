@@ -153,8 +153,10 @@
                     android:background="@drawable/signinoutedittext"
                     android:padding="10dp"
                     android:fontFamily="@font/barlow"
+                    android:inputType="textPassword"
                     android:textSize="15dp"/>
                 <CheckBox
+                    android:id="@+id/cb_sign_up"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Show password"

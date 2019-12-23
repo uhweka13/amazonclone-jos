@@ -2,10 +2,10 @@ package com.example.amazonclone
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.marginBottom
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -32,6 +32,18 @@ class SignInOut : AppCompatActivity() {
         val tv_need_help = findViewById<TextView>(R.id.tv_need_help)
         findViewById<LinearLayout>(R.id.ly_need_help).visibility = View.GONE
         findViewById<LinearLayout>(R.id.layout_error).visibility = View.GONE
+
+        //hide and unhide password/////////////////////////////////////////
+        val cb_selected = findViewById<CheckBox>(R.id.cb_sign_up)
+        val password_input = findViewById<EditText>(R.id.et_passWord_register)
+        cb_selected.setOnClickListener(View.OnClickListener {
+            if (cb_selected.isChecked) {
+                password_input.setTransformationMethod(null)
+            } else {
+                password_input.setTransformationMethod(PasswordTransformationMethod())
+            }
+        })
+        //......................................................................
 
 
         tv_need_help.setOnClickListener(View.OnClickListener {
@@ -101,6 +113,7 @@ class SignInOut : AppCompatActivity() {
             findViewById<LinearLayout>(R.id.layout_error).visibility = View.VISIBLE
             findViewById<TextView>(R.id.tv_name_error).visibility = View.VISIBLE
             var tv_details = findViewById<TextView>(R.id.tv_name_error)
+            tv_details.setPadding(0, 0, 0, 10)
             tv_details.setText("Enter your name")
 
             val foo = findViewById<EditText>(R.id.et_user_register)
@@ -116,6 +129,7 @@ class SignInOut : AppCompatActivity() {
             findViewById<LinearLayout>(R.id.layout_error).visibility = View.VISIBLE
             findViewById<TextView>(R.id.tv_email_error).visibility = View.VISIBLE
             var tv_details = findViewById<TextView>(R.id.tv_email_error)
+            tv_details.setPadding(0, 0, 0, 10)
             tv_details.setText("Enter your email")
 
             val foo = findViewById<EditText>(R.id.et_email_register)
@@ -130,6 +144,7 @@ class SignInOut : AppCompatActivity() {
             findViewById<LinearLayout>(R.id.layout_error).visibility = View.VISIBLE
             findViewById<TextView>(R.id.tv_password_error).visibility = View.VISIBLE
             var tv_details = findViewById<TextView>(R.id.tv_password_error)
+            tv_details.setPadding(0, 0, 0, 10)
             tv_details.setText("Enter your password")
 
             val foo = findViewById<EditText>(R.id.et_passWord_register)
@@ -201,6 +216,7 @@ class SignInOut : AppCompatActivity() {
             findViewById<TextView>(R.id.tv_password_error).visibility = View.GONE
             findViewById<TextView>(R.id.tv_name_error).visibility = View.GONE
             var tv_details = findViewById<TextView>(R.id.tv_email_error)
+            tv_details.setPadding(0, 0, 0, 40)
             tv_details.setText("Enter your email or mobile phone number")
 
             val foo = findViewById<EditText>(R.id.et_email_sign_in)
@@ -208,9 +224,9 @@ class SignInOut : AppCompatActivity() {
         }else if(!emailFinal.contains("@")|| !emailFinal.contains(".")){
             findViewById<LinearLayout>(R.id.layout_error).visibility = View.VISIBLE
             findViewById<TextView>(R.id.tv_email_error).visibility = View.VISIBLE
-            val emailError = findViewById<TextView>(R.id.tv_email_error)
             findViewById<TextView>(R.id.tv_password_error).visibility = View.GONE
             var tv_details = findViewById<TextView>(R.id.tv_email_error)
+            tv_details.setPadding(0, 0, 0, 40)
             tv_details.setText("Invalid email")
 
             val foo = findViewById<EditText>(R.id.et_email_sign_in)
@@ -254,11 +270,16 @@ class SignInOut : AppCompatActivity() {
 
                             Toast.makeText(this, "size 1", Toast.LENGTH_LONG).show()
                         } else {
-                            // User can sign in with email/link
+                            findViewById<LinearLayout>(R.id.layout_error).visibility = View.VISIBLE
+                            findViewById<TextView>(R.id.tv_email_error).visibility = View.VISIBLE
+                            findViewById<TextView>(R.id.tv_password_error).visibility = View.GONE
+                            var tv_details = findViewById<TextView>(R.id.tv_email_error)
+                            tv_details.setPadding(0, 0, 0, 40)
+                            tv_details.setText("We cannot find an account with that email address")
 
                             val foo = findViewById<EditText>(R.id.et_email_sign_in)
                             foo.setBackgroundResource(R.drawable.edittexterror)
-                            Toast.makeText(this, "size 0", Toast.LENGTH_LONG).show()
+
                         }
                     } else {
                         Toast.makeText(this, "failed", Toast.LENGTH_LONG).show()
@@ -268,6 +289,6 @@ class SignInOut : AppCompatActivity() {
     }
 
     fun registerUserEmail(){
-        
+
     }
 }
